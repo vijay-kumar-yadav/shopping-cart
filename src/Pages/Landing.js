@@ -22,11 +22,13 @@ const Landing = () => {
   }
   let imgBg;
   if (`${greet}` === 'Good Morning 😄') {
-    imgBg = 'https://wallpaperaccess.com/full/1319725.jpg';
+    imgBg = 'https://wallpaperaccess.com/full/2979509.jpg';
   } else if (`${greet}` === 'Good Afternoon 😃') {
-    imgBg = 'https://wallpaperaccess.com/full/2107737.jpg';
+    imgBg =
+      'https://wallpaperbat.com/img/9765-animated-landscape-weather-live-wallpaper-free-for-android-apk.jpg';
   } else if (`${greet}` === 'Good Night 😴') {
-    imgBg = 'https://wallpapercave.com/wp/wp3113563.jpg';
+    imgBg =
+      'https://i.pinimg.com/originals/e3/13/a0/e313a08e5b0455b1d2b5f345b2cdb97f.jpg';
   }
   const bgImg = {
     position: 'fixed',
@@ -45,7 +47,7 @@ const Landing = () => {
         style={{
           position: 'absolute',
           padding: '15px',
-          backgroundColor: '#c4e3ed',
+          backgroundColor: 'rgba(196, 227, 237, 0.79)',
           borderRadius: '10px',
           top: '50%',
           left: '50%',
