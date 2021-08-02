@@ -8,8 +8,8 @@ const Landing = () => {
     hour -= 12;
     ampm = 'pm';
   } else if (hour === 0 || hour === 12) ampm = 'pm';
-  const greetColor = {};
   let greet;
+  const greetColor = {};
   if (hour >= 1 && hour <= 11 && ampm === 'am') {
     greet = 'Good Morning 😄';
     greetColor.color = 'MediumSeaGreen';
@@ -17,7 +17,7 @@ const Landing = () => {
     greet = 'Good Afternoon 😃';
     greetColor.color = 'orange';
   } else if (hour === 0 || (hour >= 7 && hour < 11 && ampm === 'pm')) {
-    greet = 'Good Night 😴';
+    greet = '';
     greetColor.color = 'black';
   }
   let imgBg;
@@ -26,7 +26,7 @@ const Landing = () => {
   } else if (`${greet}` === 'Good Afternoon 😃') {
     imgBg =
       'https://wallpaperbat.com/img/9765-animated-landscape-weather-live-wallpaper-free-for-android-apk.jpg';
-  } else if (`${greet}` === 'Good Night 😴') {
+  } else if (`${greet}` === '') {
     imgBg =
       'https://i.pinimg.com/originals/e3/13/a0/e313a08e5b0455b1d2b5f345b2cdb97f.jpg';
   }
