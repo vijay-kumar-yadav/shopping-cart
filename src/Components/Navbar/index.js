@@ -8,21 +8,21 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavLink to="#">
+        <NavLink to="/">
           <h1 style={{ color: 'white', fontSize: '2em' }}>
             <FaShopify size="1.2em" color="white" /> Shoppify
           </h1>
         </NavLink>
         <Bars onClick={toggle} />
         <NavMenu>
-          <NavLink to="/Home" activeStyle>
+          <NavLink to="/Home">
             <AiOutlineHome size="1.4em" /> Home
           </NavLink>
-          <NavLink to="/Category" activeStyle>
+          <NavLink to="/Category">
             <AiOutlineUnorderedList size="1.4em" />
             Category
           </NavLink>
-          <NavLink to="/Checkout" activeStyle>
+          <NavLink to="/Checkout">
             <IoBagCheckOutline size="1.4em" /> Checkout
           </NavLink>
         </NavMenu>
