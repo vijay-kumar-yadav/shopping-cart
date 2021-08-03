@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
 #product {
   width: 100%;
   display: flex;
@@ -11,7 +13,7 @@
   overflow: hidden;
   padding: 10px;
   box-shadow: 2px 8px 20px #000;
-  margin: 10px;
+  margin: 15px;
   border-radius: 10px;
   transition: 0.5s linear;
 }
@@ -57,4 +59,11 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 15px 0;
+}
+.h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  color: rgb(39, 38, 38);
+  font-family: 'Sora', sans-serif;
 }
