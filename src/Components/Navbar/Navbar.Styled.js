@@ -23,6 +23,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   &.active {
     color: #15cdfc;
+    text-decoration: none;
   }
 `;
 

@@ -49,9 +49,10 @@ const Landing = () => {
           padding: '15px',
           backgroundColor: 'rgba(196, 227, 237, 0.79)',
           borderRadius: '10px',
-          top: '50%',
           left: '50%',
-          margin: '-100px 0 0 -150px',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+          margin: 'auto',
           textAlign: 'center',
         }}
       >

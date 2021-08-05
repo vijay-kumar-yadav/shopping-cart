@@ -7,6 +7,7 @@ import Checkout from './Pages/Checkout';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import Landing from './Pages/Landing';
+import 'rsuite/dist/styles/rsuite-default.css';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

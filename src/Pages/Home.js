@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // import { Link } from 'react-router-dom';
 import './Home.css';
+import { ProductProvider } from '../Context/Context';
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch('/Files/products.json')
-      .then(res => {
-        return res.json();
-      })
-      .then(res => {
-        setProducts(res);
-      })
-      .catch(err => {
-        // eslint-disable-next-line no-alert
-        alert(err);
-      });
-  }, []);
+  const products = ProductProvider();
 
   return (
     <>
