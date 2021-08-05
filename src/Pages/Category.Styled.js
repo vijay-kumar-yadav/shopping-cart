@@ -31,3 +31,8 @@ export const Main = styled.div`
     height: 100%;
   }
 `;
+export const Dropdown1 = styled.div`
+  @media screen and (min-width: 1037px) {
+    display: none;
+  }
+`;

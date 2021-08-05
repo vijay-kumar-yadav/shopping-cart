@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Checkbox, CheckboxGroup, Dropdown } from 'rsuite';
-
+import { Checkbox, CheckboxGroup, Dropdown, Icon } from 'rsuite';
 import { CategoryProvider, ProductProvider } from '../Context/Context';
-import { Container, Main, Sidebar, SidebarBtn } from './Category.Styled';
+import {
+  Dropdown1,
+  Container,
+  Main,
+  Sidebar,
+  SidebarBtn,
+} from './Category.Styled';
 
 import './Home.css';
 
@@ -59,14 +64,41 @@ const Category = () => {
       setDisable2(0);
     }
   };
-
+  const onSelect = Arr => {
+    if (category[0].id === Arr.id) {
+      filteredProducts = products.filter((el, index) =>
+        Arr.id === el.categoryId ? products[index] : null
+      );
+      setFilter(filteredProducts);
+    } else {
+      filteredProducts = products.filter((el, index) =>
+        Arr.id === el.categoryId ? products[index] : null
+      );
+      setFilter(filteredProducts);
+    }
+  };
+  const onSelectD = () => {
+    filteredProducts = products.filter((el, index) =>
+      el.delivery ? products[index] : null
+    );
+    setFilter(filteredProducts);
+  };
   return (
     <>
-      <Dropdown title="FILTER">
-        <Dropdown.Item onSelect={onChange}>Keyboard</Dropdown.Item>
-        <Dropdown.Item>Headphone</Dropdown.Item>
-        <Dropdown.Item>Delivery</Dropdown.Item>
-      </Dropdown>
+      <Dropdown1>
+        <Dropdown icon={<Icon icon="filter" />} title="FILTER">
+          <Dropdown.Item onSelect={() => setFilter(products)}>
+            All Products
+          </Dropdown.Item>
+          <Dropdown.Item eventKey={category[0]} onSelect={onSelect}>
+            Keyboard
+          </Dropdown.Item>
+          <Dropdown.Item eventKey={category[1]} onSelect={onSelect}>
+            Headphone
+          </Dropdown.Item>
+          <Dropdown.Item onSelect={onSelectD}>Delivery</Dropdown.Item>
+        </Dropdown>
+      </Dropdown1>
       <Container>
         <Sidebar>
           <h2 style={{ marginTop: '20px' }}>Filter</h2>
