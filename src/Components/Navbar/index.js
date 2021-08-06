@@ -15,14 +15,14 @@ const Navbar = ({ toggle }) => {
         </NavLink>
         <Bars onClick={toggle} />
         <NavMenu>
-          <NavLink to="/Home">
+          <NavLink to="/Home" style={{ textDecoration: 'none' }}>
             <AiOutlineHome size="1.4em" /> Home
           </NavLink>
-          <NavLink to="/Category">
+          <NavLink to="/Category" style={{ textDecoration: 'none' }}>
             <AiOutlineUnorderedList size="1.4em" />
             Category
           </NavLink>
-          <NavLink to="/Checkout">
+          <NavLink to="/Checkout" style={{ textDecoration: 'none' }}>
             <IoBagCheckOutline size="1.4em" /> Checkout
           </NavLink>
         </NavMenu>

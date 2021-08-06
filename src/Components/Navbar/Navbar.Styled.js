@@ -27,10 +27,14 @@ export const NavLink = styled(Link)`
     color: #15cdfc;
     text-decoration: none;
   }
+  &:hover {
+    color: #15cdfc;
+  }
 `;
 
 export const Bars = styled(FaBars)`
   display: none;
+
   color: #fff;
   @media screen and (max-width: 1037px) {
     display: block;
@@ -38,7 +42,7 @@ export const Bars = styled(FaBars)`
     top: 0;
     right: 0;
     transform: translate(-100%, 75%);
-    font-size: 1.8rem;
+    font-size: 4rem;
     cursor: pointer;
   }
 `;

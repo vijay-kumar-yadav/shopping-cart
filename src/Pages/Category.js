@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import 'rsuite/dist/styles/rsuite-default.css';
 import { Checkbox, CheckboxGroup, Dropdown, Icon } from 'rsuite';
-import { CategoryProvider, ProductProvider } from '../Context/Context';
+import { CategoryProvider, ProductProvider } from '../Helper/Helper';
 import {
   Dropdown1,
   Container,

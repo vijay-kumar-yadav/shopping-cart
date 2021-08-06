@@ -3,11 +3,10 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Category from './Pages/Category';
-import Checkout from './Pages/Checkout';
+import Checkout from './Pages/Checkout/Cart';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import Landing from './Pages/Landing';
-import 'rsuite/dist/styles/rsuite-default.css';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

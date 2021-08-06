@@ -1,4 +1,5 @@
 import React from 'react';
+import './Landing.css';
 
 const Landing = () => {
   const time = new Date();
@@ -43,25 +44,20 @@ const Landing = () => {
   return (
     <>
       <div style={bgImg} />
-      <div
-        style={{
-          position: 'absolute',
-          padding: '15px',
-          backgroundColor: 'rgba(196, 227, 237, 0.79)',
-          borderRadius: '10px',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          margin: 'auto',
-          textAlign: 'center',
-        }}
-      >
-        <h1 style={{ color: 'Tomato' }}>
-          Hello, <span style={greetColor}>{greet}</span>
+      <div className="box">
+        <h1 className="media" style={{ color: 'Tomato' }}>
+          Hello,{' '}
+          <span className="media" style={greetColor}>
+            {greet}
+          </span>
         </h1>
         <br />
-        <h1 style={{ color: 'green' }}>
-          Welcome <span style={greetColor}>To</span> Shoppify
+        <h1 className="media" style={{ color: 'green' }}>
+          Welcome{' '}
+          <span className="media" style={greetColor}>
+            To
+          </span>{' '}
+          Shoppify
         </h1>
       </div>
     </>

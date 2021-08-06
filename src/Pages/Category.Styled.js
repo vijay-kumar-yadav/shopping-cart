@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 export const Sidebar = styled.div`
   text-align: center;
-  width: 30%;
+  width: 20%;
   vertical-align: top;
   color: rgb(6, 8, 8);
 
@@ -25,7 +25,7 @@ export const Main = styled.div`
   text-align: center;
   color: rgb(0, 8, 8);
 
-  width: 70%;
+  width: 80%;
   @media screen and (max-width: 1037px) {
     width: 100%;
     height: 100%;
