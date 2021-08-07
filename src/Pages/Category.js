@@ -11,6 +11,7 @@ import {
 } from './Category.Styled';
 
 import './Home.css';
+import Product from '../Components/Product';
 
 const Category = () => {
   const category = CategoryProvider();
@@ -137,25 +138,7 @@ const Category = () => {
         <Main>
           <div id="product">
             {filter.map(product => (
-              <>
-                <div className="card" key={product.id}>
-                  {/* <Link to={`/product/${product.id}`}> */}
-                  <img src={product.thumbnail} alt={`${product.name}`} />
-                  {/* </Link> */}
-                  <div className="content">
-                    <h3>
-                      {/* <Link to={`/product/${product.id}`}> */}
-                      {product.name}
-                      {/* </Link> */}
-                    </h3>
-                    <span>${product.price}</span>
-                    <span style={{ marginLeft: 'calc(100% - 150px)' }}>
-                      {product.inStock ? 'In Stock!' : 'Out of stock'}
-                    </span>
-                    <button type="button">Add to Cart</button>
-                  </div>
-                </div>
-              </>
+              <Product product={product} key={product.id} />
             ))}
           </div>
         </Main>
