@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vijay-kumar-yadav/shopping-cart/static/css/main.6ea9c921.chunk.css",
-    "main.js": "/vijay-kumar-yadav/shopping-cart/static/js/main.58b024af.chunk.js",
-    "main.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/main.58b024af.chunk.js.map",
+    "main.js": "/vijay-kumar-yadav/shopping-cart/static/js/main.36908b59.chunk.js",
+    "main.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/main.36908b59.chunk.js.map",
     "runtime-main.js": "/vijay-kumar-yadav/shopping-cart/static/js/runtime-main.738ad2a0.js",
     "runtime-main.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/runtime-main.738ad2a0.js.map",
     "static/css/2.7785af68.chunk.css": "/vijay-kumar-yadav/shopping-cart/static/css/2.7785af68.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.7785af68.chunk.css",
     "static/js/2.7ffd07e0.chunk.js",
     "static/css/main.6ea9c921.chunk.css",
-    "static/js/main.58b024af.chunk.js"
+    "static/js/main.36908b59.chunk.js"
   ]
 }
