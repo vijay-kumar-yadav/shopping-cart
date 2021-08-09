@@ -24,7 +24,7 @@ const ContextCart = () => {
             </div>
 
             <div className="cart-icon">
-              <img src="./images/cart.png" alt="cart" />
+              <img src="./" alt="cart" />
               <p
                 style={{
                   position: 'absolute',
