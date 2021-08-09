@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/vijay-kumar-yadav/shopping-cart/static/css/main.6ea9c921.chunk.css",
+    "main.js": "/vijay-kumar-yadav/shopping-cart/static/js/main.58b024af.chunk.js",
+    "main.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/main.58b024af.chunk.js.map",
+    "runtime-main.js": "/vijay-kumar-yadav/shopping-cart/static/js/runtime-main.738ad2a0.js",
+    "runtime-main.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/runtime-main.738ad2a0.js.map",
+    "static/css/2.7785af68.chunk.css": "/vijay-kumar-yadav/shopping-cart/static/css/2.7785af68.chunk.css",
+    "static/js/2.7ffd07e0.chunk.js": "/vijay-kumar-yadav/shopping-cart/static/js/2.7ffd07e0.chunk.js",
+    "static/js/2.7ffd07e0.chunk.js.map": "/vijay-kumar-yadav/shopping-cart/static/js/2.7ffd07e0.chunk.js.map",
+    "index.html": "/vijay-kumar-yadav/shopping-cart/index.html",
+    "static/css/2.7785af68.chunk.css.map": "/vijay-kumar-yadav/shopping-cart/static/css/2.7785af68.chunk.css.map",
+    "static/css/main.6ea9c921.chunk.css.map": "/vijay-kumar-yadav/shopping-cart/static/css/main.6ea9c921.chunk.css.map",
+    "static/js/2.7ffd07e0.chunk.js.LICENSE.txt": "/vijay-kumar-yadav/shopping-cart/static/js/2.7ffd07e0.chunk.js.LICENSE.txt",
+    "static/media/Afternoon.5eddd8ea.jpg": "/vijay-kumar-yadav/shopping-cart/static/media/Afternoon.5eddd8ea.jpg",
+    "static/media/Morning.44041d7a.jpg": "/vijay-kumar-yadav/shopping-cart/static/media/Morning.44041d7a.jpg",
+    "static/media/Night.f0f8a4c7.jpg": "/vijay-kumar-yadav/shopping-cart/static/media/Night.f0f8a4c7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.738ad2a0.js",
+    "static/css/2.7785af68.chunk.css",
+    "static/js/2.7ffd07e0.chunk.js",
+    "static/css/main.6ea9c921.chunk.css",
+    "static/js/main.58b024af.chunk.js"
+  ]
+}
