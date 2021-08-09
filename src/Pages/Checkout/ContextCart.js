@@ -16,7 +16,7 @@ const ContextCart = () => {
           <header>
             <div className="continue-shopping">
               <Link to="/Home" style={{ color: 'black' }}>
-                <IoMdArrowRoundBack className="arrow-icon" />
+                <IoMdArrowRoundBack size="4rem" />
               </Link>
               <h3>continue shopping</h3>
             </div>
@@ -64,7 +64,7 @@ const ContextCart = () => {
         <header>
           <div className="continue-shopping">
             <Link to="/Home" style={{ color: 'black' }}>
-              <IoMdArrowRoundBack />
+              <IoMdArrowRoundBack size="2rem" />
             </Link>
             <h3>continue shopping</h3>
           </div>
@@ -72,7 +72,27 @@ const ContextCart = () => {
           <div className="cart-icon">
             <GiShoppingCart size="5rem" />
 
-            <p>{totalItem}</p>
+            <p
+              style={{
+                position: 'absolute',
+                width: '2rem',
+                height: '2rem',
+                right: '-0.6rem',
+                top: '2.5rem',
+                borderRadius: ' 50%',
+                background: ' #99cbf7',
+
+                boxSizing: 'border-box',
+                fontSize: '1.6rem',
+                fontWeight: 'bolder',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: ' #333',
+              }}
+            >
+              {totalItem}
+            </p>
           </div>
         </header>
 
