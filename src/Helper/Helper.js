@@ -9,7 +9,7 @@ export const useProductProvider = () => {
   useEffect(() => {
     let isComponentMounted = true;
     const fetchData = async () => {
-      const response = await fetch('/Files/products.json');
+      const response = await fetch('../Files/products.json');
       const newData = await response.json();
       if (isComponentMounted) {
         setProducts(newData);
@@ -28,7 +28,7 @@ export const useCategoryProvider = () => {
   useEffect(() => {
     let isComponentMounted = true;
     const fetchData = async () => {
-      const response = await fetch('/Files/categories.json');
+      const response = await fetch('../Files/categories.json');
       const newData = await response.json();
       if (isComponentMounted) {
         setCategory(newData);
