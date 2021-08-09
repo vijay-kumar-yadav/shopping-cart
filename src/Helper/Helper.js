@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+// import { Alert } from 'rsuite';
 import product from '../Files/products.json';
 import categories from '../Files/categories.json';
+import 'rsuite/dist/styles/rsuite-default.css';
 
-export const ProductProvider = () => {
+export const useProductProvider = () => {
   const [products, setProducts] = useState(product);
   useEffect(() => {
     let isComponentMounted = true;
@@ -21,7 +23,7 @@ export const ProductProvider = () => {
 
   return products;
 };
-export const CategoryProvider = () => {
+export const useCategoryProvider = () => {
   const [category, setCategory] = useState(categories);
   useEffect(() => {
     let isComponentMounted = true;

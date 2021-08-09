@@ -1,5 +1,8 @@
 import React from 'react';
 import './Landing.css';
+import Morning from '../Images/Morning.jpg';
+import Afternoon from '../Images/Afternoon.jpg';
+import Night from '../Images/Night.jpg';
 
 const Landing = () => {
   const time = new Date();
@@ -23,13 +26,11 @@ const Landing = () => {
   }
   let imgBg;
   if (`${greet}` === 'Good Morning 😄') {
-    imgBg = 'https://wallpaperaccess.com/full/2979509.jpg';
+    imgBg = Morning;
   } else if (`${greet}` === 'Good Afternoon 😃') {
-    imgBg =
-      'https://wallpaperbat.com/img/9765-animated-landscape-weather-live-wallpaper-free-for-android-apk.jpg';
+    imgBg = Afternoon;
   } else if (`${greet}` === '') {
-    imgBg =
-      'https://i.pinimg.com/originals/e3/13/a0/e313a08e5b0455b1d2b5f345b2cdb97f.jpg';
+    imgBg = Night;
   }
   const bgImg = {
     position: 'fixed',

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import 'rsuite/dist/styles/rsuite-default.css';
+import './Checkout/Cart.css';
 import { Checkbox, CheckboxGroup, Dropdown, Icon } from 'rsuite';
-import { CategoryProvider, ProductProvider } from '../Helper/Helper';
+import { Link } from 'react-router-dom';
+import { useCategoryProvider, useProductProvider } from '../Helper/Helper';
 import {
   Dropdown1,
   Container,
@@ -12,10 +14,12 @@ import {
 
 import './Home.css';
 import Product from '../Components/Product';
+import { CartContext } from './Checkout/Context';
 
 const Category = () => {
-  const category = CategoryProvider();
-  const products = ProductProvider();
+  const { totalItem } = useContext(CartContext);
+  const category = useCategoryProvider();
+  const products = useProductProvider();
   const [filter, setFilter] = useState([]);
   const [disable1, setDisable1] = useState(0);
   const [disable2, setDisable2] = useState(0);
@@ -87,6 +91,12 @@ const Category = () => {
   };
   return (
     <>
+      <div className="cart-icon">
+        <Link to="/Checkout">
+          <img src="./images/cart.png" alt="cart" />
+          <p>{totalItem}</p>
+        </Link>
+      </div>
       <Dropdown1>
         <Dropdown icon={<Icon icon="filter" />} title="FILTER">
           <Dropdown.Item onSelect={() => setFilter(products)}>

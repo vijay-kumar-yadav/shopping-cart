@@ -322,9 +322,12 @@ header {
 
 /* responsive media queries  */
 
-@media (max-width: 968px) {
+@media (max-width: 1043px) {
   html {
-    font-size: 50%;
+    font-size: 40%;
+  }
+  .items-info .title p {
+    font-size: 60%;
   }
 }
 

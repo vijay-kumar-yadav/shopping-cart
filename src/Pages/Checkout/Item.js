@@ -25,16 +25,12 @@ const Item = ({ id, name, thumbnail, price, quantity, categoryId }) => {
 
         <div className="add-minus-quantity">
           <i className="fas fa-minus minus" onClick={() => decrement(id)} />
-          <input
-            type="text"
-            placeholder={quantity === 0 ? removeItem(id) : quantity}
-            disabled
-          />
+          <input type="text" placeholder={quantity} disabled />
           <i className="fas fa-plus add" onClick={() => increment(id)} />
         </div>
 
         <div className="price">
-          <h3>{price}₹</h3>
+          <h3>${price}</h3>
         </div>
 
         <div className="remove-item">
