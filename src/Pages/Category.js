@@ -3,6 +3,7 @@ import 'rsuite/dist/styles/rsuite-default.css';
 import './Checkout/Cart.css';
 import { Checkbox, CheckboxGroup, Dropdown, Icon } from 'rsuite';
 import { Link } from 'react-router-dom';
+import { GiShoppingCart } from 'react-icons/gi';
 import { useCategoryProvider, useProductProvider } from '../Helper/Helper';
 import {
   Dropdown1,
@@ -93,7 +94,8 @@ const Category = () => {
     <>
       <div className="cart-icon">
         <Link to="/Checkout">
-          <img src="./images/cart.png" alt="cart" />
+          <GiShoppingCart size="5rem" />
+
           <p>{totalItem}</p>
         </Link>
       </div>

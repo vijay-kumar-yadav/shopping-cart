@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { GiShoppingCart } from 'react-icons/gi';
 import { useProductProvider } from '../Helper/Helper';
 import Product from '../Components/Product';
 import { CartContext } from './Checkout/Context';
@@ -13,7 +14,8 @@ const Home = () => {
       <h1 className="h1">Products</h1>
       <div className="cart-icon">
         <Link to="/Checkout">
-          <img src="./images/cart.png" alt="cart" />
+          <GiShoppingCart size="5rem" />
+
           <p>{totalItem}</p>
         </Link>
       </div>

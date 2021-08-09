@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Link } from 'react-router-dom';
+import { GiShoppingCart } from 'react-icons/gi';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 import { CartContext } from './Context';
 import Item from './Item';
 
@@ -13,18 +15,14 @@ const ContextCart = () => {
         <div className="body">
           <header>
             <div className="continue-shopping">
-              <Link to="/Home">
-                <img
-                  src="./images/arrow.png"
-                  alt="arrow"
-                  className="arrow-icon"
-                />
+              <Link to="/Home" style={{ color: 'black' }}>
+                <IoMdArrowRoundBack className="arrow-icon" />
               </Link>
               <h3>continue shopping</h3>
             </div>
 
             <div className="cart-icon">
-              <img src="./" alt="cart" />
+              <GiShoppingCart size="5rem" />
               <p
                 style={{
                   position: 'absolute',
@@ -65,12 +63,15 @@ const ContextCart = () => {
       <div className="body">
         <header>
           <div className="continue-shopping">
-            <img src="./images/arrow.png" alt="arrow" className="arrow-icon" />
+            <Link to="/Home" style={{ color: 'black' }}>
+              <IoMdArrowRoundBack />
+            </Link>
             <h3>continue shopping</h3>
           </div>
 
           <div className="cart-icon">
-            <img src="./images/cart.png" alt="cart" />
+            <GiShoppingCart size="5rem" />
+
             <p>{totalItem}</p>
           </div>
         </header>
