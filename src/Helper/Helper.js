@@ -1,43 +1,20 @@
-import { useEffect, useState } from 'react';
-// import { Alert } from 'rsuite';
+import { useState } from 'react';
 import product from '../Files/products.json';
 import categories from '../Files/categories.json';
-import 'rsuite/dist/styles/rsuite-default.css';
 
-export const useProductProvider = () => {
-  const [products, setProducts] = useState(product);
-  useEffect(() => {
-    let isComponentMounted = true;
-    const fetchData = async () => {
-      const response = await fetch('/Files/products.json');
-      const newData = await response.json();
-      if (isComponentMounted) {
-        setProducts(newData);
-      }
-    };
-    fetchData();
-    return () => {
-      isComponentMounted = false;
-    };
-  }, []);
+export const useProduct = () => {
+  const [products] = useState(product);
 
   return products;
 };
-export const useCategoryProvider = () => {
-  const [category, setCategory] = useState(categories);
-  useEffect(() => {
-    let isComponentMounted = true;
-    const fetchData = async () => {
-      const response = await fetch('/Files/categories.json');
-      const newData = await response.json();
-      if (isComponentMounted) {
-        setCategory(newData);
-      }
-    };
-    fetchData();
-    return () => {
-      isComponentMounted = false;
-    };
-  }, []);
+export const useCategory = () => {
+  const [category] = useState(categories);
   return category;
+};
+// export const useProduct = () => product;
+// export const useCategory = () => categories;
+const cart = [];
+export const AddCart = item => {
+  cart.push(item);
+  return cart;
 };

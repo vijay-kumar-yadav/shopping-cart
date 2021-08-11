@@ -15,7 +15,7 @@ const Product = ({ product }) => {
           <span style={{ marginLeft: 'calc(100% - 105px)' }}>
             {product.inStock ? 'In Stock!' : 'Out of stock'}
           </span>
-          <button type="button" onClick={() => AddToCart(product.id)}>
+          <button type="button" onClick={() => AddToCart(product)}>
             Add to Cart
           </button>
         </div>

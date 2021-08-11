@@ -9,7 +9,7 @@ import Sidebar from './Components/Sidebar';
 import Landing from './Pages/Landing';
 import { CartContext } from './Pages/Checkout/Context';
 import { Reducer } from './Pages/Checkout/Reducer';
-import { useCategoryProvider } from './Helper/Helper';
+import { useCategory } from './Helper/Helper';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,22 +17,15 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  const category = useCategoryProvider();
-  const initialState = {
-    item:
-      JSON.parse(localStorage.getItem('list')).totalItem === 0
-        ? []
-        : JSON.parse(localStorage.getItem('list')).item,
-    totalAmount:
-      JSON.parse(localStorage.getItem('list')).totalItem === 0
-        ? []
-        : JSON.parse(localStorage.getItem('list')).totalAmount,
-    totalItem:
-      JSON.parse(localStorage.getItem('list')).totalItem === 0
-        ? []
-        : JSON.parse(localStorage.getItem('list')).totalItem,
-  };
+  const initialState = localStorage.getItem('list')
+    ? JSON.parse(localStorage.getItem('list'))
+    : {
+        item: [],
+        totalAmount: [],
+        totalItem: [],
+      };
   const [state, dispatch] = useReducer(Reducer, initialState);
+
   // store in local storage
   useEffect(() => {
     localStorage.setItem('list', JSON.stringify(state));
@@ -66,18 +59,18 @@ function App() {
     });
   };
   // add to cart
-  const AddToCart = id => {
+  const AddToCart = product => {
     return dispatch({
       type: 'ADDTOCART',
-      payload: id,
+      products: product,
     });
   };
-
+  const category = useCategory();
   // we will use the useEffect to update the data
   useEffect(() => {
     dispatch({ type: 'GET_TOTAL' });
     dispatch({ type: 'GET_TOTAL_AMOUNT' });
-  }, [state.item]);
+  }, [state.item.length, state.item]);
 
   return (
     <CartContext.Provider

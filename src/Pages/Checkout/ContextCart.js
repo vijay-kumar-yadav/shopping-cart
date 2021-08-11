@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Link } from 'react-router-dom';
-import { GiShoppingCart } from 'react-icons/gi';
-import { IoMdArrowRoundBack } from 'react-icons/io';
 import { CartContext } from './Context';
 import Item from './Item';
+import arrow from './images/arrow.png';
+import cart from './images/cart.png';
 
 const ContextCart = () => {
   const { item, clearCart, totalItem, totalAmount } = useContext(CartContext);
@@ -16,29 +16,30 @@ const ContextCart = () => {
           <header>
             <div className="continue-shopping">
               <Link to="/Home" style={{ color: 'black' }}>
-                <IoMdArrowRoundBack size="4rem" />
+                <img src={arrow} alt="arrow" className="arrow-icon" />
               </Link>
               <h3>continue shopping</h3>
             </div>
 
             <div className="cart-icon">
-              <GiShoppingCart size="5rem" />
+              <img src={cart} alt="cart" />
               <p
                 style={{
                   position: 'absolute',
                   width: '2rem',
                   height: '2rem',
                   right: '-0.6rem',
-                  top: ' 2.6rem',
-                  borderRadius: '50%',
+                  top: '2.5rem',
+                  borderRadius: ' 50%',
                   background: ' #99cbf7',
+
                   boxSizing: 'border-box',
                   fontSize: '1.6rem',
-                  fontWeight: ' bolder',
+                  fontWeight: 'bolder',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  color: '#333 ',
+                  color: ' #333',
                 }}
               >
                 {totalItem}
@@ -63,15 +64,14 @@ const ContextCart = () => {
       <div className="body">
         <header>
           <div className="continue-shopping">
-            <Link to="/Home" style={{ color: 'black' }}>
-              <IoMdArrowRoundBack size="2rem" />
+            <Link to="/Home">
+              <img src={arrow} alt="arrow" className="arrow-icon" />
             </Link>
             <h3>continue shopping</h3>
           </div>
 
           <div className="cart-icon">
-            <GiShoppingCart size="5rem" />
-
+            <img src={cart} alt="cart" />
             <p
               style={{
                 position: 'absolute',

@@ -3,8 +3,8 @@ import 'rsuite/dist/styles/rsuite-default.css';
 import './Checkout/Cart.css';
 import { Checkbox, CheckboxGroup, Dropdown, Icon } from 'rsuite';
 import { Link } from 'react-router-dom';
-import { GiShoppingCart } from 'react-icons/gi';
-import { useCategoryProvider, useProductProvider } from '../Helper/Helper';
+import cart from './Checkout/images/cart.png';
+import { useCategory, useProduct } from '../Helper/Helper';
 import {
   Dropdown1,
   Container,
@@ -19,8 +19,8 @@ import { CartContext } from './Checkout/Context';
 
 const Category = () => {
   const { totalItem } = useContext(CartContext);
-  const category = useCategoryProvider();
-  const products = useProductProvider();
+  const category = useCategory();
+  const products = useProduct();
   const [filter, setFilter] = useState([]);
   const [disable1, setDisable1] = useState(0);
   const [disable2, setDisable2] = useState(0);
@@ -94,7 +94,7 @@ const Category = () => {
     <>
       <div className="cart-icon">
         <Link to="/Checkout">
-          <GiShoppingCart size="5rem" />
+          <img src={cart} alt="cart" />
 
           <p>{totalItem}</p>
         </Link>
