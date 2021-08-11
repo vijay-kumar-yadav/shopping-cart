@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { Alert } from 'rsuite';
 import product from '../Files/products.json';
+import 'rsuite/dist/styles/rsuite-default.css';
+
 import categories from '../Files/categories.json';
 
 export const useProduct = () => {
@@ -15,6 +18,11 @@ export const useCategory = () => {
 // export const useCategory = () => categories;
 const cart = [];
 export const AddCart = item => {
+  if (!item.inStock) {
+    Alert.info('Out of stock');
+  } else {
+    Alert.success('Added to cart');
+  }
   cart.push(item);
   return cart;
 };

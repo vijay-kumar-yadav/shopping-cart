@@ -1,7 +1,8 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-alert */
-
+import { Alert } from 'rsuite';
+import 'rsuite/dist/styles/rsuite-default.css';
 import { AddCart } from '../../Helper/Helper';
 
 export const Reducer = (state, action) => {
@@ -16,6 +17,7 @@ export const Reducer = (state, action) => {
       };
     }
     case 'CLEAR_CART': {
+      Alert.success('Cart cleared');
       return {
         ...state,
         item: [],
@@ -69,9 +71,10 @@ export const Reducer = (state, action) => {
     case 'ADDTOCART': {
       const oldItem = state.item.includes(action.products);
       if (oldItem) {
+        Alert.info('Product already in cart');
         return { ...state };
       }
-      const cart = AddCart(action.products);
+      const cart = AddCart(action.products).filter(e => e.inStock === true);
       return {
         ...state,
         item: cart,

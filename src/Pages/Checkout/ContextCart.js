@@ -1,15 +1,18 @@
 import React, { useContext } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Link } from 'react-router-dom';
+import { Alert } from 'rsuite';
 import { CartContext } from './Context';
 import Item from './Item';
 import arrow from './images/arrow.png';
 import cart from './images/cart.png';
+import 'rsuite/dist/styles/rsuite-default.css';
 
 const ContextCart = () => {
   const { item, clearCart, totalItem, totalAmount } = useContext(CartContext);
 
   if (item.length === 0) {
+    Alert.info('Cart is empty');
     return (
       <>
         <div className="body">
