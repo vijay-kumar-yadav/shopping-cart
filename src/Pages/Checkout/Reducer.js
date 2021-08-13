@@ -3,24 +3,39 @@
 /* eslint-disable no-alert */
 import { Alert } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
-import { AddCart } from '../../Helper/Helper';
 
+let cart = [];
+export const AddCart = item => {
+  if (!item.inStock && item !== []) {
+    Alert.info('Out of stock');
+  }
+  if (item !== [] && item.inStock) {
+    Alert.success('Added to cart');
+  }
+  if (item === 'clear') cart = [];
+  else cart.push(item);
+
+  return cart;
+};
 export const Reducer = (state, action) => {
   // const product = useProduct();
   switch (action.type) {
     case 'REMOVE_ITEM': {
+      cart = state.item.filter(curElem => {
+        return curElem.id !== action.payload;
+      });
       return {
         ...state,
-        item: state.item.filter(curElem => {
-          return curElem.id !== action.payload;
-        }),
+        item: cart,
       };
     }
     case 'CLEAR_CART': {
       Alert.success('Cart cleared');
+      cart = AddCart('clear');
+
       return {
         ...state,
-        item: [],
+        item: cart,
       };
     }
     case 'INCREMENT': {
@@ -41,7 +56,10 @@ export const Reducer = (state, action) => {
           }
           return e;
         })
-        .filter(curElem => curElem.quantity !== 0);
+        .filter(curElem => {
+          return curElem.quantity !== 0;
+        });
+      cart = updatedCart;
 
       return { ...state, item: updatedCart };
     }
@@ -74,7 +92,7 @@ export const Reducer = (state, action) => {
         Alert.info('Product already in cart');
         return { ...state };
       }
-      const cart = AddCart(action.products).filter(e => e.inStock === true);
+      cart = AddCart(action.products).filter(e => e.inStock === true);
       return {
         ...state,
         item: cart,

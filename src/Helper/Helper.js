@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Alert } from 'rsuite';
+// import { Alert } from 'rsuite';
 import product from '../Files/products.json';
 import 'rsuite/dist/styles/rsuite-default.css';
 
@@ -16,13 +16,16 @@ export const useCategory = () => {
 };
 // export const useProduct = () => product;
 // export const useCategory = () => categories;
-const cart = [];
-export const AddCart = item => {
-  if (!item.inStock) {
-    Alert.info('Out of stock');
-  } else {
-    Alert.success('Added to cart');
-  }
-  cart.push(item);
-  return cart;
-};
+// let cart = [];
+// export const AddCart = item => {
+//   if (!item.inStock && item !== []) {
+//     Alert.info('Out of stock');
+//   }
+//   if (item !== [] && item.inStock) {
+//     Alert.success('Added to cart');
+//   }
+//   if (item === 'clear') cart = [];
+//   else cart.push(item);
+
+//   return cart;
+// };
